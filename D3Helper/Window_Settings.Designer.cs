@@ -227,7 +227,6 @@
             this.tb_assignedSkill1.Name = "tb_assignedSkill1";
             this.tb_assignedSkill1.Size = new System.Drawing.Size(250, 20);
             this.tb_assignedSkill1.TabIndex = 13;
-            this.tb_assignedSkill1.TextChanged += new System.EventHandler(this.tb_assignedSkill1_TextChanged);
             // 
             // label8
             // 
@@ -245,7 +244,6 @@
             this.tb_assignedEditMode.Name = "tb_assignedEditMode";
             this.tb_assignedEditMode.Size = new System.Drawing.Size(250, 20);
             this.tb_assignedEditMode.TabIndex = 16;
-            this.tb_assignedEditMode.TextChanged += new System.EventHandler(this.tb_assignedEditMode_TextChanged);
             // 
             // label9
             // 
@@ -528,7 +526,7 @@
             this.bt_delete_hotkey_autocube_ConvertMaterial.TabIndex = 83;
             this.bt_delete_hotkey_autocube_ConvertMaterial.Text = "X";
             this.bt_delete_hotkey_autocube_ConvertMaterial.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_autocube_ConvertMaterial.Click += new System.EventHandler(this.delete_hotkey_autocube_ConvertMaterial_Click);
+            this.bt_delete_hotkey_autocube_ConvertMaterial.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // tb_assignedAutoCube_ConvertMaterial
             // 
@@ -567,7 +565,7 @@
             this.bt_delete_hotkey_autocube_upgradeRare.TabIndex = 79;
             this.bt_delete_hotkey_autocube_upgradeRare.Text = "X";
             this.bt_delete_hotkey_autocube_upgradeRare.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_autocube_upgradeRare.Click += new System.EventHandler(this.bt_delete_hotkey_autocube_upgradeRare_Click);
+            this.bt_delete_hotkey_autocube_upgradeRare.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // tb_assignedAutoCube_UpgradeRare
             // 
@@ -586,7 +584,7 @@
             this.bt_delete_hotkey_autopick.TabIndex = 77;
             this.bt_delete_hotkey_autopick.Text = "X";
             this.bt_delete_hotkey_autopick.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_autopick.Click += new System.EventHandler(this.bt_delete_hotkey_autopick_Click);
+            this.bt_delete_hotkey_autopick.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // label19
             // 
@@ -615,7 +613,7 @@
             this.bt_delete_hotkey_skillbuild4.TabIndex = 74;
             this.bt_delete_hotkey_skillbuild4.Text = "X";
             this.bt_delete_hotkey_skillbuild4.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillbuild4.Click += new System.EventHandler(this.bt_delete_hotkey_skillbuild4_Click);
+            this.bt_delete_hotkey_skillbuild4.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillbuild3
             // 
@@ -627,7 +625,7 @@
             this.bt_delete_hotkey_skillbuild3.TabIndex = 73;
             this.bt_delete_hotkey_skillbuild3.Text = "X";
             this.bt_delete_hotkey_skillbuild3.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillbuild3.Click += new System.EventHandler(this.bt_delete_hotkey_skillbuild3_Click);
+            this.bt_delete_hotkey_skillbuild3.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillbuild2
             // 
@@ -639,7 +637,7 @@
             this.bt_delete_hotkey_skillbuild2.TabIndex = 72;
             this.bt_delete_hotkey_skillbuild2.Text = "X";
             this.bt_delete_hotkey_skillbuild2.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillbuild2.Click += new System.EventHandler(this.bt_delete_hotkey_skillbuild2_Click);
+            this.bt_delete_hotkey_skillbuild2.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillbuild1
             // 
@@ -651,7 +649,7 @@
             this.bt_delete_hotkey_skillbuild1.TabIndex = 71;
             this.bt_delete_hotkey_skillbuild1.Text = "X";
             this.bt_delete_hotkey_skillbuild1.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillbuild1.Click += new System.EventHandler(this.bt_delete_hotkey_skillbuild1_Click);
+            this.bt_delete_hotkey_skillbuild1.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // tb_assignedSkillBuild4
             // 
@@ -731,7 +729,7 @@
             this.bt_delete_hotkey_autogamble.TabIndex = 62;
             this.bt_delete_hotkey_autogamble.Text = "X";
             this.bt_delete_hotkey_autogamble.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_autogamble.Click += new System.EventHandler(this.bt_delete_hotkey_autogamble_Click);
+            this.bt_delete_hotkey_autogamble.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // label14
             // 
@@ -760,7 +758,7 @@
             this.bt_delete_hotkey_skillslotlmb.TabIndex = 59;
             this.bt_delete_hotkey_skillslotlmb.Text = "X";
             this.bt_delete_hotkey_skillslotlmb.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillslotlmb.Click += new System.EventHandler(this.bt_delete_hotkey_skillslotlmb_Click);
+            this.bt_delete_hotkey_skillslotlmb.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // tb_assignedSkillLMB
             // 
@@ -789,7 +787,7 @@
             this.bt_delete_hotkey_paragonpoints4.TabIndex = 56;
             this.bt_delete_hotkey_paragonpoints4.Text = "X";
             this.bt_delete_hotkey_paragonpoints4.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_paragonpoints4.Click += new System.EventHandler(this.bt_delete_hotkey_paragonpoints4_Click);
+            this.bt_delete_hotkey_paragonpoints4.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_paragonpoints3
             // 
@@ -801,7 +799,7 @@
             this.bt_delete_hotkey_paragonpoints3.TabIndex = 55;
             this.bt_delete_hotkey_paragonpoints3.Text = "X";
             this.bt_delete_hotkey_paragonpoints3.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_paragonpoints3.Click += new System.EventHandler(this.bt_delete_hotkey_paragonpoints3_Click);
+            this.bt_delete_hotkey_paragonpoints3.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_paragonpoints2
             // 
@@ -813,7 +811,7 @@
             this.bt_delete_hotkey_paragonpoints2.TabIndex = 54;
             this.bt_delete_hotkey_paragonpoints2.Text = "X";
             this.bt_delete_hotkey_paragonpoints2.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_paragonpoints2.Click += new System.EventHandler(this.bt_delete_hotkey_paragonpoints2_Click);
+            this.bt_delete_hotkey_paragonpoints2.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_paragonpoints1
             // 
@@ -825,7 +823,7 @@
             this.bt_delete_hotkey_paragonpoints1.TabIndex = 53;
             this.bt_delete_hotkey_paragonpoints1.Text = "X";
             this.bt_delete_hotkey_paragonpoints1.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_paragonpoints1.Click += new System.EventHandler(this.bt_delete_hotkey_paragonpoints1_Click);
+            this.bt_delete_hotkey_paragonpoints1.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // label21
             // 
@@ -863,7 +861,6 @@
             this.tb_assignedParagonPoints4.Name = "tb_assignedParagonPoints4";
             this.tb_assignedParagonPoints4.Size = new System.Drawing.Size(250, 20);
             this.tb_assignedParagonPoints4.TabIndex = 49;
-            this.tb_assignedParagonPoints4.TextChanged += new System.EventHandler(this.tb_assignedParagonPoints4_TextChanged);
             // 
             // tb_assignedParagonPoints3
             // 
@@ -906,7 +903,7 @@
             this.bt_delete_hotkey_gearswap4.TabIndex = 44;
             this.bt_delete_hotkey_gearswap4.Text = "X";
             this.bt_delete_hotkey_gearswap4.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_gearswap4.Click += new System.EventHandler(this.bt_delete_hotkey_gearswap4_Click);
+            this.bt_delete_hotkey_gearswap4.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_gearswap3
             // 
@@ -918,7 +915,7 @@
             this.bt_delete_hotkey_gearswap3.TabIndex = 43;
             this.bt_delete_hotkey_gearswap3.Text = "X";
             this.bt_delete_hotkey_gearswap3.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_gearswap3.Click += new System.EventHandler(this.bt_delete_hotkey_gearswap3_Click);
+            this.bt_delete_hotkey_gearswap3.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_gearswap2
             // 
@@ -930,7 +927,7 @@
             this.bt_delete_hotkey_gearswap2.TabIndex = 42;
             this.bt_delete_hotkey_gearswap2.Text = "X";
             this.bt_delete_hotkey_gearswap2.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_gearswap2.Click += new System.EventHandler(this.bt_delete_hotkey_gearswap2_Click);
+            this.bt_delete_hotkey_gearswap2.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_gearswap1
             // 
@@ -942,7 +939,7 @@
             this.bt_delete_hotkey_gearswap1.TabIndex = 41;
             this.bt_delete_hotkey_gearswap1.Text = "X";
             this.bt_delete_hotkey_gearswap1.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_gearswap1.Click += new System.EventHandler(this.bt_delete_hotkey_gearswap1_Click);
+            this.bt_delete_hotkey_gearswap1.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_gearswap_editmode
             // 
@@ -954,7 +951,7 @@
             this.bt_delete_hotkey_gearswap_editmode.TabIndex = 40;
             this.bt_delete_hotkey_gearswap_editmode.Text = "X";
             this.bt_delete_hotkey_gearswap_editmode.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_gearswap_editmode.Click += new System.EventHandler(this.bt_delete_hotkey_gearswap_editmode_Click);
+            this.bt_delete_hotkey_gearswap_editmode.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillslotrmb
             // 
@@ -966,7 +963,7 @@
             this.bt_delete_hotkey_skillslotrmb.TabIndex = 39;
             this.bt_delete_hotkey_skillslotrmb.Text = "X";
             this.bt_delete_hotkey_skillslotrmb.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillslotrmb.Click += new System.EventHandler(this.bt_delete_hotkey_skillslotrmb_Click);
+            this.bt_delete_hotkey_skillslotrmb.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillslot4
             // 
@@ -978,7 +975,7 @@
             this.bt_delete_hotkey_skillslot4.TabIndex = 38;
             this.bt_delete_hotkey_skillslot4.Text = "X";
             this.bt_delete_hotkey_skillslot4.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillslot4.Click += new System.EventHandler(this.bt_delete_hotkey_skillslot4_Click);
+            this.bt_delete_hotkey_skillslot4.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillslot3
             // 
@@ -990,7 +987,7 @@
             this.bt_delete_hotkey_skillslot3.TabIndex = 37;
             this.bt_delete_hotkey_skillslot3.Text = "X";
             this.bt_delete_hotkey_skillslot3.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillslot3.Click += new System.EventHandler(this.bt_delete_hotkey_skillslot3_Click);
+            this.bt_delete_hotkey_skillslot3.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillslot2
             // 
@@ -1002,7 +999,7 @@
             this.bt_delete_hotkey_skillslot2.TabIndex = 36;
             this.bt_delete_hotkey_skillslot2.Text = "X";
             this.bt_delete_hotkey_skillslot2.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillslot2.Click += new System.EventHandler(this.bt_delete_hotkey_skillslot2_Click);
+            this.bt_delete_hotkey_skillslot2.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // bt_delete_hotkey_skillslot1
             // 
@@ -1014,7 +1011,7 @@
             this.bt_delete_hotkey_skillslot1.TabIndex = 35;
             this.bt_delete_hotkey_skillslot1.Text = "X";
             this.bt_delete_hotkey_skillslot1.UseVisualStyleBackColor = true;
-            this.bt_delete_hotkey_skillslot1.Click += new System.EventHandler(this.bt_delete_hotkey_skillslot1_Click);
+            this.bt_delete_hotkey_skillslot1.Click += new System.EventHandler(this.Settings_HotKeys_Delete_OnClick);
             // 
             // page_Overlay
             // 

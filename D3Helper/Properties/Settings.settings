@@ -35,7 +35,7 @@
     <Setting Name="HotkeyGearSwap4" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="HotkeySlotRmb" Type="System.String" Scope="User">
+    <Setting Name="HotkeySlotRMB" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="overlayfps" Type="System.Boolean" Scope="User">
@@ -80,7 +80,7 @@
     <Setting Name="HotkeyParagonPoints4" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="HotkeySlotLmb" Type="System.String" Scope="User">
+    <Setting Name="HotkeySlotLMB" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="D3Helper_UpdateRate" Type="System.Int32" Scope="User">

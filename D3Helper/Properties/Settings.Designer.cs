@@ -158,12 +158,12 @@ namespace D3Helper.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string HotkeySlotRmb {
+        public string HotkeySlotRMB {
             get {
-                return ((string)(this["HotkeySlotRmb"]));
+                return ((string)(this["HotkeySlotRMB"]));
             }
             set {
-                this["HotkeySlotRmb"] = value;
+                this["HotkeySlotRMB"] = value;
             }
         }
         
@@ -338,12 +338,12 @@ namespace D3Helper.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string HotkeySlotLmb {
+        public string HotkeySlotLMB {
             get {
-                return ((string)(this["HotkeySlotLmb"]));
+                return ((string)(this["HotkeySlotLMB"]));
             }
             set {
-                this["HotkeySlotLmb"] = value;
+                this["HotkeySlotLMB"] = value;
             }
         }
         

@@ -37,8 +37,8 @@ namespace D3Helper.A_Collector
                 Hotkey slot2 = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot2);
                 Hotkey slot3 = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot3);
                 Hotkey slot4 = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot4);
-                Hotkey slotrmb = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotRmb);
-                Hotkey slotlmb = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotLmb);
+                Hotkey slotrmb = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotRMB);
+                Hotkey slotlmb = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotLMB);
                 Hotkey editmode = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyEditMode);
                 Hotkey swap1 = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyGearSwap1);
                 Hotkey swap2 = get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyGearSwap2);

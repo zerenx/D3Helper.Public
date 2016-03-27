@@ -80,36 +80,38 @@ namespace D3Helper
             this.tb_assignedAutoCube_UpgradeRare.ReadOnly = true;
             this.tb_assignedAutoCube_ConvertMaterial.ReadOnly = true;
 
-            this.tb_assignedSkill1.KeyDown += tb_assignedSkill1_KeyDown;
-            this.tb_assignedSkill2.KeyDown += tb_assignedSkill2_KeyDown;
-            this.tb_assignedSkill3.KeyDown += tb_assignedSkill3_KeyDown;
-            this.tb_assignedSkill4.KeyDown += tb_assignedSkill4_KeyDown;
-            this.tb_assignedSkillRMB.KeyDown += tb_assignedSkillRMB_KeyDown;
-            this.tb_assignedSkillLMB.KeyDown += tb_assignedSkillLMB_KeyDown;
-            this.tb_assignedEditMode.KeyDown += tb_assignedEditMode_KeyDown;
-            this.tb_assignedGearSwap1.KeyDown += tb_assignedGearSwap1_KeyDown;
-            this.tb_assignedGearSwap2.KeyDown += tb_assignedGearSwap2_KeyDown;
-            this.tb_assignedGearSwap3.KeyDown += tb_assignedGearSwap3_KeyDown;
-            this.tb_assignedGearSwap4.KeyDown += tb_assignedGearSwap4_KeyDown;
-            this.tb_assignedParagonPoints1.KeyDown += tb_assignedParagonPoints1_KeyDown;
-            this.tb_assignedParagonPoints2.KeyDown += tb_assignedParagonPoints2_KeyDown;
-            this.tb_assignedParagonPoints3.KeyDown += tb_assignedParagonPoints3_KeyDown;
-            this.tb_assignedParagonPoints4.KeyDown += tb_assignedParagonPoints4_KeyDown;
-            this.tb_assignedAutoGambleHotkey.KeyDown += Tb_assignedAutoGambleHotkey_KeyDown;
-            this.tb_assignedSkillBuild1.KeyDown += Tb_assignedSkillBuild1_KeyDown;
-            this.tb_assignedSkillBuild2.KeyDown += Tb_assignedSkillBuild2_KeyDown;
-            this.tb_assignedSkillBuild3.KeyDown += Tb_assignedSkillBuild3_KeyDown;
-            this.tb_assignedSkillBuild4.KeyDown += Tb_assignedSkillBuild4_KeyDown;
-            this.tb_assignedAutoPick.KeyDown += Tb_assignedAutoPick_KeyDown;
-            this.tb_assignedAutoCube_UpgradeRare.KeyDown += Tb_assignedAutoCube_UpgradeRare_KeyDown;
-            this.tb_assignedAutoCube_ConvertMaterial.KeyDown += Tb_assignedAutoCube_ConvertMaterial_KeyDown;
+            // Assign event handlers
+            this.tb_assignedSkill1.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkill2.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkill3.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkill4.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkillRMB.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkillLMB.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedEditMode.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedGearSwap1.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedGearSwap2.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedGearSwap3.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedGearSwap4.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedParagonPoints1.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedParagonPoints2.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedParagonPoints3.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedParagonPoints4.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedAutoGambleHotkey.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkillBuild1.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkillBuild2.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkillBuild3.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedSkillBuild4.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedAutoPick.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedAutoCube_UpgradeRare.KeyDown += Settings_Hotkeys_TB_KeyDown;
+            this.tb_assignedAutoCube_ConvertMaterial.KeyDown += Settings_Hotkeys_TB_KeyDown;
 
+            // Load settings and put it on the controls
             this.tb_assignedSkill1.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot1).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot1).Modifiers);
             this.tb_assignedSkill2.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot2).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot2).Modifiers);
             this.tb_assignedSkill3.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot3).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot3).Modifiers);
             this.tb_assignedSkill4.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot4).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlot4).Modifiers);
-            this.tb_assignedSkillRMB.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotRmb).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotRmb).Modifiers);
-            this.tb_assignedSkillLMB.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotLmb).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotLmb).Modifiers);
+            this.tb_assignedSkillRMB.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotRMB).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotRMB).Modifiers);
+            this.tb_assignedSkillLMB.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotLMB).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeySlotLMB).Modifiers);
             this.tb_assignedEditMode.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyEditMode).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyEditMode).Modifiers);
             this.tb_assignedGearSwap1.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyGearSwap1).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyGearSwap1).Modifiers);
             this.tb_assignedGearSwap2.Text = get_HotkeyText(H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyGearSwap2).Key, H_Keyboard.get_HotkeyFromSettingsString(Properties.Settings.Default.HotkeyGearSwap2).Modifiers);
@@ -159,168 +161,9 @@ namespace D3Helper
             this.cbox_ConvertMaterialFromTo.Text = Properties.Settings.Default.ConvertMaterialText;
         }
 
-        private void Tb_assignedAutoCube_UpgradeRare_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedAutoCube_UpgradeRare.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyAutoCube_UpgradeRare = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        private void Tb_assignedAutoCube_ConvertMaterial_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedAutoCube_ConvertMaterial.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyAutoCube_ConvertMaterial = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        private void Tb_assignedAutoPick_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedAutoPick.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyAutoPick = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        private void Tb_assignedSkillBuild4_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkillBuild4.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySkillBuild4 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        private void Tb_assignedSkillBuild3_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkillBuild3.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySkillBuild3 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        private void Tb_assignedSkillBuild2_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkillBuild2.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySkillBuild2 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        private void Tb_assignedSkillBuild1_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkillBuild1.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySkillBuild1 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        private void Tb_assignedAutoGambleHotkey_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedAutoGambleHotkey.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyAutoGamble = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
         private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Open skill editor if that tab is clicked
             if (tabControl1.SelectedIndex == 4)
             {
                 tabControl1.SelectedIndex = 0;
@@ -335,132 +178,6 @@ namespace D3Helper
                 SkillBuild_UpdateView();
             }
         }
-
-        void tb_assignedSkillLMB_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkillLMB.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySlotLmb = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-
-        }
-
-        void tb_assignedParagonPoints4_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedParagonPoints4.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyParagonPoints4 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-
-        }
-
-        void tb_assignedParagonPoints3_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedParagonPoints3.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyParagonPoints3 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-
-        }
-
-        void tb_assignedParagonPoints2_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedParagonPoints2.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyParagonPoints2 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-
-        }
-
-        void tb_assignedParagonPoints1_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedParagonPoints1.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyParagonPoints1 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-
-        }
-
-        void tb_assignedEditMode_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedEditMode.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyEditMode = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
 
         private string get_HotkeyText(Key key, List<Key> modifiers)
         {
@@ -479,8 +196,11 @@ namespace D3Helper
 
             return text;
         }
-        void tb_assignedSkillRMB_KeyDown(object sender, KeyEventArgs e)
+
+        void Settings_Hotkeys_TB_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox SenderTB = (TextBox)sender;
+            string AssociatedSettings = "";
             Keys Key = e.KeyCode;
 
             SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
@@ -494,171 +214,197 @@ namespace D3Helper
             if (e.Shift)
                 Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
 
-            this.tb_assignedSkillRMB.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySlotRmb = get_HotkeyText(key, Modifiers);
+            SenderTB.Text = get_HotkeyText(key, Modifiers);
+
+            // Assign which setting to change, according to sender object
+            switch (SenderTB.Name)
+            {
+                case "tb_assignedSkill1":
+                    AssociatedSettings = "HotkeySlot1";
+                    break;
+                case "tb_assignedSkill2":
+                    AssociatedSettings = "HotkeySlot2";
+                    break;
+                case "tb_assignedSkill3":
+                    AssociatedSettings = "HotkeySlot3";
+                    break;
+                case "tb_assignedSkill4":
+                    AssociatedSettings = "HotkeySlot4";
+                    break;
+                case "tb_assignedSkillLMB":
+                    AssociatedSettings = "HotkeySlotLMB";
+                    break;
+                case "tb_assignedSkillRMB":
+                    AssociatedSettings = "HotkeySlotRMB";
+                    break;
+                case "tb_assignedEditMode":
+                    AssociatedSettings = "HotkeyEditMode";
+                    break;
+                case "tb_assignedGearSwap1":
+                    AssociatedSettings = "HotkeyGearSwap1";
+                    break;
+                case "tb_assignedGearSwap2":
+                    AssociatedSettings = "HotkeyGearSwap2";
+                    break;
+                case "tb_assignedGearSwap3":
+                    AssociatedSettings = "HotkeyGearSwap3";
+                    break;
+                case "tb_assignedGearSwap4":
+                    AssociatedSettings = "HotkeyGearSwap4";
+                    break;
+                case "tb_assignedParagonPoints1":
+                    AssociatedSettings = "HotkeyParagonPoints1";
+                    break;
+                case "tb_assignedParagonPoints2":
+                    AssociatedSettings = "HotkeyParagonPoints2";
+                    break;
+                case "tb_assignedParagonPoints3":
+                    AssociatedSettings = "HotkeyParagonPoints3";
+                    break;
+                case "tb_assignedParagonPoints4":
+                    AssociatedSettings = "HotkeyParagonPoints4";
+                    break;
+                case "tb_assignedAutoGambleHotkey":
+                    AssociatedSettings = "HotkeyAutoGamble";
+                    break;
+                case "tb_assignedSkillBuild1":
+                    AssociatedSettings = "HotkeySkillBuild1";
+                    break;
+                case "tb_assignedSkillBuild2":
+                    AssociatedSettings = "HotkeySkillBuild2";
+                    break;
+                case "tb_assignedSkillBuild3":
+                    AssociatedSettings = "HotkeySkillBuild3";
+                    break;
+                case "tb_assignedSkillBuild4":
+                    AssociatedSettings = "HotkeySkillBuild4";
+                    break;
+                case "tb_assignedAutoPick":
+                    AssociatedSettings = "HotkeyAutoPick";
+                    break;
+                case "tb_assignedAutoCube_UpgradeRare":
+                    AssociatedSettings = "HotkeyAutoCube_UpgradeRare";
+                    break;
+                case "tb_assignedAutoCube_ConvertMaterial":
+                    AssociatedSettings = "HotkeyAutoCube_ConvertMaterial";
+                    break;
+            }
+
+            // Actually assign the variable and save it
+            Properties.Settings.Default[AssociatedSettings] = SenderTB.Text;
             Properties.Settings.Default.Save();
         }
 
-        void tb_assignedGearSwap4_KeyDown(object sender, KeyEventArgs e)
+        private void Settings_HotKeys_Delete_OnClick(object sender, EventArgs e)
         {
-            Keys Key = e.KeyCode;
+            string AssociatedSettings = "";
+            TextBox AssociatedTB = null;
+            Button SenderBtn = (Button)sender;
 
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
+            switch (SenderBtn.Name)
+            {
+                case "bt_delete_hotkey_skillslot1":
+                    AssociatedTB = (TextBox)tb_assignedSkill1;
+                    AssociatedSettings = "HotkeySlot1";
+                    break;
+                case "bt_delete_hotkey_skillslot2":
+                    AssociatedTB = (TextBox)tb_assignedSkill2;
+                    AssociatedSettings = "HotkeySlot2";
+                    break;
+                case "bt_delete_hotkey_skillslot3":
+                    AssociatedTB = (TextBox)tb_assignedSkill3;
+                    AssociatedSettings = "HotkeySlot3";
+                    break;
+                case "bt_delete_hotkey_skillslot4":
+                    AssociatedTB = (TextBox)tb_assignedSkill4;
+                    AssociatedSettings = "HotkeySlot4";
+                    break;
+                case "bt_delete_hotkey_skillslotlmb":
+                    AssociatedTB = (TextBox)tb_assignedSkillLMB;
+                    AssociatedSettings = "HotkeySlotLMB";
+                    break;
+                case "bt_delete_hotkey_skillslotrmb":
+                    AssociatedTB = (TextBox)tb_assignedSkillRMB;
+                    AssociatedSettings = "HotkeySlotRMB";
+                    break;
+                case "bt_delete_hotkey_gearswap_editmode":
+                    AssociatedTB = (TextBox)tb_assignedEditMode;
+                    AssociatedSettings = "HotkeyEditMode";
+                    break;
+                case "bt_delete_hotkey_gearswap1":
+                    AssociatedTB = (TextBox)tb_assignedGearSwap1;
+                    AssociatedSettings = "HotkeyGearSwap1";
+                    break;
+                case "bt_delete_hotkey_gearswap2":
+                    AssociatedTB = (TextBox)tb_assignedGearSwap2;
+                    AssociatedSettings = "HotkeyGearSwap2";
+                    break;
+                case "bt_delete_hotkey_gearswap3":
+                    AssociatedTB = (TextBox)tb_assignedGearSwap3;
+                    AssociatedSettings = "HotkeyGearSwap3";
+                    break;
+                case "bt_delete_hotkey_gearswap4":
+                    AssociatedTB = (TextBox)tb_assignedGearSwap4;
+                    AssociatedSettings = "HotkeyGearSwap4";
+                    break;
+                case "bt_delete_hotkey_paragonpoints1":
+                    AssociatedTB = (TextBox)tb_assignedParagonPoints1;
+                    AssociatedSettings = "HotkeyParagonPoints1";
+                    break;
+                case "bt_delete_hotkey_paragonpoints2":
+                    AssociatedTB = (TextBox)tb_assignedParagonPoints2;
+                    AssociatedSettings = "HotkeyParagonPoints2";
+                    break;
+                case "bt_delete_hotkey_paragonpoints3":
+                    AssociatedTB = (TextBox)tb_assignedParagonPoints3;
+                    AssociatedSettings = "HotkeyParagonPoints3";
+                    break;
+                case "bt_delete_hotkey_paragonpoints4":
+                    AssociatedTB = (TextBox)tb_assignedParagonPoints4;
+                    AssociatedSettings = "HotkeyParagonPoints4";
+                    break;
+                case "bt_delete_hotkey_autogamble":
+                    AssociatedTB = (TextBox)tb_assignedAutoGambleHotkey;
+                    AssociatedSettings = "HotkeyAutoGamble";
+                    break;
+                case "bt_delete_hotkey_skillbuild1":
+                    AssociatedTB = (TextBox)tb_assignedSkillBuild1;
+                    AssociatedSettings = "HotkeySkillBuild1";
+                    break;
+                case "bt_delete_hotkey_skillbuild2":
+                    AssociatedTB = (TextBox)tb_assignedSkillBuild2;
+                    AssociatedSettings = "HotkeySkillBuild2";
+                    break;
+                case "bt_delete_hotkey_skillbuild3":
+                    AssociatedTB = (TextBox)tb_assignedSkillBuild3;
+                    AssociatedSettings = "HotkeySkillBuild3";
+                    break;
+                case "bt_delete_hotkey_skillbuild4":
+                    AssociatedTB = (TextBox)tb_assignedSkillBuild4;
+                    AssociatedSettings = "HotkeySkillBuild4";
+                    break;
+                case "bt_delete_hotkey_autopick":
+                    AssociatedTB = (TextBox)tb_assignedAutoPick;
+                    AssociatedSettings = "HotkeyAutoPick";
+                    break;
+                case "bt_delete_hotkey_autocube_upgradeRare":
+                    AssociatedTB = (TextBox)tb_assignedAutoCube_UpgradeRare;
+                    AssociatedSettings = "HotkeyAutoCube_UpgradeRare";
+                    break;
+                case "bt_delete_hotkey_autocube_ConvertMaterial":
+                    AssociatedTB = (TextBox)tb_assignedAutoCube_ConvertMaterial;
+                    AssociatedSettings = "HotkeyAutoCube_ConvertMaterial";
+                    break;
+            }
 
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedGearSwap4.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyGearSwap4 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
+            if (AssociatedSettings != "" && AssociatedTB != null && AssociatedTB.TextLength >= 1)
+            {
+                AssociatedTB.Text = "";
+                Properties.Settings.Default[AssociatedSettings] = "";
+                Properties.Settings.Default.Save();
+            }
         }
 
-        void tb_assignedGearSwap3_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedGearSwap3.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyGearSwap3 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        void tb_assignedGearSwap2_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedGearSwap2.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyGearSwap2 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        void tb_assignedGearSwap1_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedGearSwap1.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeyGearSwap1 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        void tb_assignedSkill4_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkill4.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySlot4 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        void tb_assignedSkill3_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkill3.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySlot3 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        void tb_assignedSkill2_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkill2.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySlot2 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-        }
-
-        void tb_assignedSkill1_KeyDown(object sender, KeyEventArgs e)
-        {
-            Keys Key = e.KeyCode;
-
-            SlimDX.DirectInput.Key key = A_Tools.InputSimulator.IS_Keyboard.convert_KeysToKey(Key);
-
-            List<SlimDX.DirectInput.Key> Modifiers = new List<Key>();
-
-            if (e.Alt)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftAlt);
-            if (e.Control)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftControl);
-            if (e.Shift)
-                Modifiers.Add(SlimDX.DirectInput.Key.LeftShift);
-
-            this.tb_assignedSkill1.Text = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.HotkeySlot1 = get_HotkeyText(key, Modifiers);
-            Properties.Settings.Default.Save();
-
-        }
 
         private void cb_autopotion_CheckedChanged(object sender, EventArgs e)
         {
@@ -699,179 +445,11 @@ namespace D3Helper
             Properties.Settings.Default.overlayskillbuttons = this.cb_skillbuttons.Checked;
             Properties.Settings.Default.Save();
         }
-        
-        private void tb_assignedEditMode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bt_delete_hotkey_skillslot1_Click(object sender, EventArgs e)
-        {
-
-            if (this.tb_assignedSkill1.Text.Length > 1)
-            {
-                this.tb_assignedSkill1.Text = "";
-                Properties.Settings.Default.HotkeySlot1 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_skillslot2_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkill2.Text.Length > 1)
-            {
-                this.tb_assignedSkill2.Text = "";
-                Properties.Settings.Default.HotkeySlot2 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_skillslot3_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkill3.Text.Length > 1)
-            {
-                this.tb_assignedSkill3.Text = "";
-                Properties.Settings.Default.HotkeySlot3 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_skillslot4_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkill4.Text.Length > 1)
-            {
-                this.tb_assignedSkill4.Text = "";
-                Properties.Settings.Default.HotkeySlot4 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_skillslotrmb_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkillRMB.Text.Length > 1)
-            {
-                this.tb_assignedSkillRMB.Text = "";
-                Properties.Settings.Default.HotkeySlotRmb = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_gearswap_editmode_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedEditMode.Text.Length > 1)
-            {
-                this.tb_assignedEditMode.Text = "";
-                Properties.Settings.Default.HotkeyEditMode = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_gearswap1_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedGearSwap1.Text.Length > 1)
-            {
-                this.tb_assignedGearSwap1.Text = "";
-                Properties.Settings.Default.HotkeyGearSwap1 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_gearswap2_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedGearSwap2.Text.Length > 1)
-            {
-                this.tb_assignedGearSwap2.Text = "";
-                Properties.Settings.Default.HotkeyGearSwap2 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_gearswap3_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedGearSwap3.Text.Length > 1)
-            {
-                this.tb_assignedGearSwap3.Text = "";
-                Properties.Settings.Default.HotkeyGearSwap3 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_gearswap4_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedGearSwap4.Text.Length > 1)
-            {
-                this.tb_assignedGearSwap4.Text = "";
-                Properties.Settings.Default.HotkeyGearSwap4 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void tb_assignedSkill1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void cb_autogamble_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.AutoGambleBool = this.cb_autogamble.Checked;
             Properties.Settings.Default.Save();
-        }
-
-        private void bt_delete_hotkey_paragonpoints1_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedParagonPoints1.Text.Length > 1)
-            {
-                this.tb_assignedParagonPoints1.Text = "";
-                Properties.Settings.Default.HotkeyParagonPoints1 = "";
-                Properties.Settings.Default.Save();
-
-            }
-        }
-
-        private void bt_delete_hotkey_paragonpoints2_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedParagonPoints2.Text.Length > 1)
-            {
-                this.tb_assignedParagonPoints2.Text = "";
-                Properties.Settings.Default.HotkeyParagonPoints2 = "";
-                Properties.Settings.Default.Save();
-
-            }
-        }
-
-        private void bt_delete_hotkey_paragonpoints3_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedParagonPoints3.Text.Length > 1)
-            {
-                this.tb_assignedParagonPoints3.Text = "";
-                Properties.Settings.Default.HotkeyParagonPoints3 = "";
-                Properties.Settings.Default.Save();
-
-            }
-        }
-
-        private void bt_delete_hotkey_paragonpoints4_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedParagonPoints4.Text.Length > 1)
-            {
-                this.tb_assignedParagonPoints4.Text = "";
-                Properties.Settings.Default.HotkeyParagonPoints4 = "";
-                Properties.Settings.Default.Save();
-
-            }
-        }
-
-
-
-        private void bt_delete_hotkey_skillslotlmb_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkillLMB.Text.Length > 1)
-            {
-                this.tb_assignedSkillLMB.Text = "";
-                Properties.Settings.Default.HotkeySlotLmb = "";
-                Properties.Settings.Default.Save();
-
-            }
         }
 
         private void tb_updaterate_TextChanged(object sender, EventArgs e)
@@ -909,23 +487,7 @@ namespace D3Helper
                 }
             }
         }
-
-        private void tb_assignedParagonPoints4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bt_delete_hotkey_autogamble_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedAutoGambleHotkey.Text.Length > 1)
-            {
-                this.tb_assignedAutoGambleHotkey.Text = "";
-                Properties.Settings.Default.HotkeyAutoGamble = "";
-                Properties.Settings.Default.Save();
-
-            }
-        }
-
+        
         private void CB_ExtendedLogging_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -1486,60 +1048,10 @@ namespace D3Helper
             SkillBuild_UpdateView();
         }
 
-        private void bt_delete_hotkey_skillbuild1_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkillBuild1.Text.Length > 1)
-            {
-                this.tb_assignedSkillBuild1.Text = "";
-                Properties.Settings.Default.HotkeySkillBuild1 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_skillbuild2_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkillBuild2.Text.Length > 1)
-            {
-                this.tb_assignedSkillBuild2.Text = "";
-                Properties.Settings.Default.HotkeySkillBuild2 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_skillbuild3_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkillBuild3.Text.Length > 1)
-            {
-                this.tb_assignedSkillBuild3.Text = "";
-                Properties.Settings.Default.HotkeySkillBuild3 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
-        private void bt_delete_hotkey_skillbuild4_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedSkillBuild4.Text.Length > 1)
-            {
-                this.tb_assignedSkillBuild4.Text = "";
-                Properties.Settings.Default.HotkeySkillBuild4 = "";
-                Properties.Settings.Default.Save();
-            }
-        }
-
         private void CB_ApsAndSnapShotAPs_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Overlay_APS = this.CB_ApsAndSnapShotAPs.Checked;
             Properties.Settings.Default.Save();
-        }
-
-        private void bt_delete_hotkey_autopick_Click(object sender, EventArgs e)
-        {
-            if (this.tb_assignedAutoPick.Text.Length > 1)
-            {
-                this.tb_assignedAutoPick.Text = "";
-                Properties.Settings.Default.HotkeyAutoPick = "";
-                Properties.Settings.Default.Save();
-            }
         }
 
         private void CB_AutoPick_Gem_CheckedChanged(object sender, EventArgs e)
@@ -1601,16 +1113,6 @@ namespace D3Helper
         {
             Properties.Settings.Default.AutoPickSettings_Rares = this.CB_AutoPick_Rares.Checked;
             Properties.Settings.Default.Save();
-        }
-
-        private void bt_delete_hotkey_autocube_upgradeRare_Click(object sender, EventArgs e)
-        {
-            if (tb_assignedAutoCube_UpgradeRare.Text.Length > 1)
-            {
-                tb_assignedAutoCube_UpgradeRare.Text = "";
-                Properties.Settings.Default.HotkeyAutoCube_UpgradeRare = "";
-                Properties.Settings.Default.Save();
-            }
         }
 
         private void delete_hotkey_autocube_ConvertMaterial_Click(object sender, EventArgs e)
